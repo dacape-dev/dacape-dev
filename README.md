@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+Medium: https://medium.com/@dacape.dev/
+LinkedIn: https://www.linkedin.com/in/daniel-carvajal-pelicano-54061b20/
 <!--
 **dacape-dev/dacape-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
