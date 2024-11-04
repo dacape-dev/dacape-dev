@@ -7,6 +7,7 @@ logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 author: Sal
 paginate: 30
+paginate_path: '/page:num/'
 disqus: 'Affiliates'
 locale: en_us
 lang: en_us
