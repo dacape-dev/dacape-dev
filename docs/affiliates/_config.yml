@@ -48,7 +48,6 @@ plugins:
 
 lsi: false
 safe: true
-source: /dacape-dev
 incremental: false
 highlighter: rouge
 gist:
