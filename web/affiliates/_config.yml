@@ -44,3 +44,5 @@ plugins:
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-archives
+
+theme: jekyll-theme-affiliates
