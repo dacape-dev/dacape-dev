@@ -1,16 +1,14 @@
-/* Definición de colores */
 :root {
-    --light-purple: #D8BFD8;
-    --medium-purple: #B39DDB;
-    --dark-purple: #9575CD;
+    --light-purple: #EAB8EA;
+    --medium-purple: #A76D99;
+    --dark-purple: #5D3A91;
     --background-purple: #F3E5F5;
-    --button-purple: #CE93D8;
-    --text-dark: #4A235A;
+    --button-purple: #B86BC8;
+    --text-dark: #3E1B5E;
 }
 
-/* Estilos generales para el body */
 body {
-    background-color: var(--background-purple); /* Fondo morado */
+    background-color: var(--background-purple);
     color: var(--text-dark);
 }
 
@@ -29,11 +27,10 @@ body {
 
 /* Header */
 header {
-    background-color: var(--dark-purple) !important; /* Asegura que el color de fondo sea el morado oscuro */
+    background-color: var(--dark-purple) !important; 
     color: white !important;
 }
 
-/* Botón primario */
 .btn-primary {
     background-color: var(--button-purple);
     border: none;
@@ -43,7 +40,6 @@ header {
     background-color: var(--dark-purple);
 }
 
-/* Estilos del banner de cookies */
 #cookieBanner {
     background-color: #f8d7da;
     color: #721c24;
@@ -59,7 +55,6 @@ header {
     margin-left: 10px;
 }
 
-/* Estilos del modal de preferencias */
 .modal-content {
     border-radius: 8px;
     border: 1px solid #ddd;
@@ -87,7 +82,6 @@ header {
     margin-top: 5px;
 }
 
-/* Estilos adicionales */
 .small {
     font-size: 0.85rem;
     color: #6c757d;
