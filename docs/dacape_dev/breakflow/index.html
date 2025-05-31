@@ -8,30 +8,46 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="https://play-lh.googleusercontent.com/0aDbLZ0DbBdjwvmYoIuxVskLcgzPNLMebKaocHRpKDKvLRWpF9sVzDM2v1_4jLL2Eg=w240-h480-rw" />
+    <style>
+      :root {
+        --primary: #ffffff;
+        --on-primary: #000000;
+        --background: #f5f5f5;
+        --on-background: #1e1e1e;
+        --button-bg: #66d1ba;
+        --button-hover: #99e8d8;
+        --button-text: #00201a;
+      }
+    </style>
   </head>
-  <body class="bg-gray-900 text-white font-sans">
+  <body class="bg-[var(--background)] text-[var(--on-background)] font-sans">
     <!-- Hero -->
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-      <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-yellow-300">
+      <img
+        src="https://play-lh.googleusercontent.com/0aDbLZ0DbBdjwvmYoIuxVskLcgzPNLMebKaocHRpKDKvLRWpF9sVzDM2v1_4jLL2Eg=w240-h480-rw"
+        alt="Breakflow logo"
+        class="w-24 h-24 rounded-2xl mb-6 shadow-lg"
+      />
+      <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-[var(--on-background)]">
         Breakflow
       </h1>
-      <p class="text-lg sm:text-2xl max-w-xl mb-6 text-gray-300">
+      <p class="text-lg sm:text-2xl max-w-xl mb-6 text-gray-700">
         Potencia tu concentración con un temporizador Pomodoro que combina minimalismo y animaciones visuales.
       </p>
       <a
         href="https://play.google.com/store/apps/details?id=dev.dacape.breakflow"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 px-6 rounded-xl transition"
+        class="bg-[var(--button-bg)] hover:bg-[var(--button-hover)] text-[var(--button-text)] font-bold py-3 px-6 rounded-xl transition"
       >
         Descargar en Google Play
       </a>
     </header>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-500 text-sm">
-      © Breakflow. Creado con ❤ por dacape.dev
+    <footer class="bg-[#e0e0e0] py-8 text-center text-gray-600 text-sm">
+      © Breakflow. Creado con ❤ por <a href="https://dacape.dev" class="underline">dacape.dev</a>
     </footer>
   </body>
 </html>
