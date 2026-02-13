@@ -14,6 +14,66 @@ function applySystemTheme() {
   media.addEventListener("change", (event) => updateTheme(event.matches));
 }
 
+let lightboxElements = null;
+
+function initLightbox() {
+  const root = document.getElementById("image-lightbox");
+  const image = document.getElementById("lightbox-image");
+  const closeButton = document.getElementById("lightbox-close");
+  if (!root || !image || !closeButton) return;
+
+  const closeLightbox = () => {
+    root.classList.add("hidden");
+    root.classList.remove("flex");
+    root.setAttribute("aria-hidden", "true");
+    image.src = "";
+  };
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  root.addEventListener("click", (event) => {
+    if (event.target === root) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && root.classList.contains("flex")) {
+      closeLightbox();
+    }
+  });
+
+  lightboxElements = { root, image, closeLightbox };
+}
+
+function openLightbox(src, alt) {
+  if (!lightboxElements || !src) return;
+
+  lightboxElements.image.src = src;
+  lightboxElements.image.alt = alt || "Imagen ampliada";
+  lightboxElements.root.classList.remove("hidden");
+  lightboxElements.root.classList.add("flex");
+  lightboxElements.root.setAttribute("aria-hidden", "false");
+}
+
+function enableImageZoom(image) {
+  if (!image) return;
+
+  image.classList.add("cursor-zoom-in");
+  image.tabIndex = 0;
+  image.setAttribute("role", "button");
+
+  const open = () => openLightbox(image.src, image.alt);
+
+  image.addEventListener("click", open);
+  image.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      open();
+    }
+  });
+}
+
 function setText(id, value) {
   const element = document.getElementById(id);
   if (element && value) {
@@ -34,6 +94,7 @@ function renderProcessSteps(steps) {
     image.className = "object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700";
     image.src = step.src || "";
     image.alt = step.alt || "Process image";
+    enableImageZoom(image);
 
     wrapper.appendChild(image);
     container.appendChild(wrapper);
@@ -57,6 +118,7 @@ function renderCertificate(data) {
   if (featuredImage) {
     featuredImage.src = data.process?.featured?.src || "";
     featuredImage.alt = data.process?.featured?.alt || "Featured process image";
+    enableImageZoom(featuredImage);
   }
   setText("featured-label", data.process?.featured?.label);
   renderProcessSteps(data.process?.steps);
@@ -109,4 +171,5 @@ async function loadCertificate() {
 }
 
 applySystemTheme();
+initLightbox();
 loadCertificate();
