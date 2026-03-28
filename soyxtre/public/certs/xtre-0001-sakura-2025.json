@@ -1,0 +1,16 @@
+{
+  "uuid": "xtre-0001-sakura-2025",
+  "name": "Alfombra Sakura",
+  "description": "Inspirada en los cerezos en flor. Hecha a mano con técnica de tufting en lana merino. Cada pétalo fue cortado a tijera individualmente.",
+  "dimensions": "80 × 60 cm",
+  "materials": "Lana merino, base primaria de tufting, látex antideslizante",
+  "technique": "Tufting a pistola",
+  "edition": "Pieza única",
+  "date": "Marzo 2025",
+  "images": [
+    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80",
+    "https://images.unsplash.com/photo-1615529179035-e760f6a2dcee?w=800&q=80"
+  ]
+}
