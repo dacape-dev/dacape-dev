@@ -6,6 +6,9 @@
 
 👤 [LinkedIn](https://www.linkedin.com/in/daniel-carvajal-pelicano-54061b20/)
 
+🎶 [Tiktok](https://www.tiktok.com/@dacape.dev)
+
+
 <!--
 **dacape-dev/dacape-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
