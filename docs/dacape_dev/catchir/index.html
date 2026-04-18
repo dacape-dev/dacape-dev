@@ -1,65 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CatchIR</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatchIR – Object Hunt Game</title>
+  <meta name="description" content="El juego de caza de objetos que convierte tu salón en un tablero. La IA reconoce objetos reales en tiempo real. ¡30 segundos para atrapar todo lo que puedas!">
+  <meta name="theme-color" content="#1B2B20">
+  <link rel="icon" href="logo512.png">
+  <link rel="stylesheet" href="../../shared/style.css">
+  <style>
+    :root {
+      --bg:              #1B2B20;
+      --bg-surface:      #2C3E31;
+      --text:            #FFFFFF;
+      --text-muted:      #B0B0B0;
+      --accent:          #3DFF8C;
+      --accent-dark:     #2ADB73;
+      --accent-fg:       #0F1A12;
+      --gradient-from:   #1B2B20;
+      --gradient-to:     #0F1A12;
+      --card-border:     rgba(61, 255, 140, 0.18);
+      --footer-bg:       #0F1A12;
+      --footer-text:     #B0B0B0;
+      --icon-bg:         rgba(61, 255, 140, 0.12);
+      --logo-shadow:     rgba(61, 255, 140, 0.4);
+      --btn-shadow:      rgba(61, 255, 140, 0.35);
+      --btn-shadow-hover:rgba(61, 255, 140, 0.55);
+      --card-shadow:     rgba(0, 0, 0, 0.4);
+      --blob-opacity:    0.2;
+    }
+  </style>
+</head>
+<body>
 
-    <!-- SEO -->
-    <meta
-      name="description"
-      content="CatchIR"
-    />
-
-    <!-- Tailwind -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Favicon -->
-    <link rel="icon" href="logo512.png" />
-
-    <style>
-      :root {
-        --primary: #ffffff;
-        --on-primary: #000000;
-        --background: #f8fafc;
-        --on-background: #1e293b;
-        --button-bg: #7cc6ff;
-        --button-hover: #a7ddff;
-        --button-text: #003554;
-      }
-    </style>
-  </head>
-
-  <body class="bg-[var(--background)] text-[var(--on-background)] font-sans">
-    <!-- Hero -->
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-      <img
-        src="logo512.png"
-        alt="Logotipo de CatchIR"
-        class="w-28 h-28 rounded-2xl mb-6 shadow-lg"
-      />
-
-      <h1 class="text-4xl sm:text-6xl font-bold mb-4">
-        CatchIR
-      </h1>
-
-      <a
-        href="https://play.google.com/store/apps/details?id=dev.dacape.CatchIR"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-[var(--button-bg)] hover:bg-[var(--button-hover)] text-[var(--button-text)] font-bold py-3 px-6 rounded-xl transition"
-      >
+  <!-- HERO -->
+  <main class="hero">
+    <div class="hero-content">
+      <img src="logo512.png" alt="CatchIR" class="app-logo">
+      <h1 class="app-name">CatchIR</h1>
+      <p class="app-tagline">
+        El juego de caza de objetos que convierte tu casa en un tablero.
+        La IA reconoce objetos reales en tiempo real. ¡30 segundos para atrapar todo lo que puedas!
+      </p>
+      <a href="https://play.google.com/store/apps/details?id=dev.dacape.catchir"
+         target="_blank" rel="noopener noreferrer" class="btn-play">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-9.937 5.597 7.635-7.9zm3.199-1.803c.6.34.6 1.202 0 1.542l-1.847 1.04L13.5 12l2.35-2.486 1.847 1.04zM6.864 3.394l9.937 5.597-2.302 2.302-7.635-7.9z"/>
+        </svg>
         Descargar en Google Play
       </a>
-    </header>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" fill="var(--bg)">
+        <path d="M0 56h1440V28C1200 56 960 0 720 0S240 56 0 28v28z"/>
+      </svg>
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#e2e8f0] py-8 text-center text-gray-600 text-sm">
-      © CatchIR. Creado con ❤ por
-      <a href="https://dacape.dev" class="underline font-medium">dacape.dev</a>
-    </footer>
-  </body>
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-inner">
+      <p class="section-eyebrow">Cómo funciona</p>
+      <h2 class="section-title">El mundo real como tablero de juego</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Camera -->
+            <svg viewBox="0 0 24 24"><path d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"/></svg>
+          </div>
+          <h3 class="feature-title">IA que ve objetos reales</h3>
+          <p class="feature-desc">Apunta la cámara a cualquier objeto de tu casa y la IA lo reconoce al instante. Tazas, zapatos, sillas, libros… ¡todo vale!</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Bolt / fast -->
+            <svg viewBox="0 0 24 24"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <h3 class="feature-title">Rondas de 30 segundos</h3>
+          <p class="feature-desc">Recibe el nombre de un objeto y corre a encontrarlo antes de que se acabe el tiempo. Competición rápida, tensa y muy divertida.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Users / family -->
+            <svg viewBox="0 0 24 24"><path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+          </div>
+          <h3 class="feature-title">Para toda la familia</h3>
+          <p class="feature-desc">Sin reglas complicadas, sin cuentas, sin internet. Abre la app y empieza a jugar. Perfecto para noches de juegos o cumpleaños.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="privacy_policy.html">Política de privacidad</a>
+      <a href="terms_conditions.html">Términos y condiciones</a>
+    </div>
+    <p class="footer-brand">© 2025 CatchIR · Creado con ♥ por <a href="https://dacape.dev">dacape.dev</a></p>
+  </footer>
+
+</body>
 </html>
