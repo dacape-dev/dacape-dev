@@ -49,9 +49,10 @@
         "icon": "⚡",
         "items": [
           {
-            "name": "Nombre del accesorio",
-            "description": "Descripción breve del producto y por qué lo recomiendo.",
-            "url": "",
+            "name": "Tesla - Referidos",
+            "description": "Si utilizas este link tendrás un gran descuento cuando compres cualquier coche Tesla nuevo, en función del modelo que elijas el descuento será mayor o menor.",
+            "url": "https://www.tesla.com/referral/daniel965396",
+            "image": "images/tesla-ref.jpg",
             "tag": "Favorito"
           }
         ]
