@@ -1,0 +1,88 @@
+{
+  "profile": {
+    "name": "Daniel Carvajal",
+    "handle": "dacape.dev",
+    "bio": "Desarrollador con más de una década de experiencia y creador de contenido. He pasado por startups, proyectos freelance y productos propios — aprendiendo que lo mejor que puedes construir es aquello que la gente usa sin darse cuenta. Hoy comparto lo que sé: código, herramientas, gadgets y todo lo que forma parte de mi día a día. Si algo me ha cambiado la forma de trabajar o de vivir, lo encontrarás aquí.",
+    "photo": "images/profile.jpg",
+    "amazonUrl": "https://www.amazon.es/c%C3%B3digo-funciona-pero-huele-mal-ebook/dp/B0F92S7S47/ref=pd_ci_mcx_mh_mcx_views_0_title?pd_rd_w=SF5A4&content-id=amzn1.sym.5a2aff7c-ad46-4e62-b09b-dbe15bc29663%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=5a2aff7c-ad46-4e62-b09b-dbe15bc29663&pf_rd_r=JBHFRBK3D64FW67WD9JM&pd_rd_wg=ANmxU&pd_rd_r=76e8aeba-ef75-4a8a-a2c8-4c177c08aba5&pd_rd_i=B0F92S7S47",
+    "googlePlayUrl": "https://play.google.com/store/apps/developer?id=dacape.dev"
+  },
+  "socials": [
+    { "id": "instagram", "label": "Instagram",  "url": "https://www.instagram.com/dacape.dev/" },
+    { "id": "tiktok",    "label": "TikTok",     "url": "https://www.tiktok.com/@dacape.dev" },
+    { "id": "youtube",   "label": "YouTube",    "url": "https://tiktok.com/@dacape.dev" },
+    { "id": "x",         "label": "X",          "url": "https://twitter.com/dacape_dev" },
+    { "id": "github",    "label": "GitHub",     "url": "https://github.com/dacape-dev/" },
+    { "id": "linkedin",  "label": "LinkedIn",   "url": "https://www.linkedin.com/in/daniel-carvajal-pelicano-54061b20/" }
+  ],
+  "featuredLinks": [
+    {
+      "icon": "📚",
+      "label": "Mis libros",
+      "description": "Títulos que he publicado en Amazon",
+      "url": ""
+    },
+    {
+      "icon": "📱",
+      "label": "Mis apps",
+      "description": "Aplicaciones disponibles en Google Play",
+      "url": ""
+    },
+    {
+      "icon": "⭐",
+      "label": "Productos recomendados",
+      "description": "Gadgets y accesorios que uso a diario",
+      "url": "#productos"
+    },
+    {
+      "icon": "🏷️",
+      "label": "Códigos de descuento",
+      "description": "Descuentos exclusivos para mis seguidores",
+      "url": "#descuentos"
+    }
+  ],
+  "products": {
+    "categories": [
+      {
+        "id": "tesla",
+        "name": "Tesla",
+        "icon": "⚡",
+        "items": [
+          {
+            "name": "Nombre del accesorio",
+            "description": "Descripción breve del producto y por qué lo recomiendo.",
+            "url": "",
+            "tag": "Favorito"
+          }
+        ]
+      },
+      {
+        "id": "perifericos",
+        "name": "Periféricos",
+        "icon": "🖥️",
+        "items": []
+      },
+      {
+        "id": "teclados",
+        "name": "Teclados Custom",
+        "icon": "⌨️",
+        "items": []
+      },
+      {
+        "id": "iphone",
+        "name": "Accesorios iPhone",
+        "icon": "📱",
+        "items": []
+      }
+    ]
+  },
+  "discounts": [
+    {
+      "brand": "Nombre de la marca",
+      "code": "DACAPE10",
+      "description": "Descripción del descuento y en qué productos aplica.",
+      "discount": "10% de descuento",
+      "url": ""
+    }
+  ]
+}
