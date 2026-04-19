@@ -10,7 +10,7 @@
   "socials": [
     { "id": "instagram", "label": "Instagram",  "url": "https://www.instagram.com/dacape.dev/" },
     { "id": "tiktok",    "label": "TikTok",     "url": "https://www.tiktok.com/@dacape.dev" },
-    { "id": "youtube",   "label": "YouTube",    "url": "https://tiktok.com/@dacape.dev" },
+    { "id": "youtube",   "label": "YouTube",    "url": "https://www.youtube.com/@dacape_dev" },
     { "id": "x",         "label": "X",          "url": "https://twitter.com/dacape_dev" },
     { "id": "github",    "label": "GitHub",     "url": "https://github.com/dacape-dev/" },
     { "id": "linkedin",  "label": "LinkedIn",   "url": "https://www.linkedin.com/in/daniel-carvajal-pelicano-54061b20/" }
@@ -29,61 +29,26 @@
       "url": ""
     },
     {
-      "icon": "⭐",
-      "label": "Productos recomendados",
-      "description": "Gadgets y accesorios que uso a diario",
-      "url": "#productos"
-    },
-    {
       "icon": "🏷️",
       "label": "Códigos de descuento",
       "description": "Descuentos exclusivos para mis seguidores",
       "url": "#descuentos"
     }
   ],
-  "products": {
-    "categories": [
-      {
-        "id": "tesla",
-        "name": "Tesla",
-        "icon": "⚡",
-        "items": [
-          {
-            "name": "Tesla - Referidos",
-            "description": "Si utilizas este link tendrás un gran descuento cuando compres cualquier coche Tesla nuevo, en función del modelo que elijas el descuento será mayor o menor.",
-            "url": "https://www.tesla.com/referral/daniel965396",
-            "image": "images/tesla-ref.jpg",
-            "tag": "Favorito"
-          }
-        ]
-      },
-      {
-        "id": "perifericos",
-        "name": "Periféricos",
-        "icon": "🖥️",
-        "items": []
-      },
-      {
-        "id": "teclados",
-        "name": "Teclados Custom",
-        "icon": "⌨️",
-        "items": []
-      },
-      {
-        "id": "iphone",
-        "name": "Accesorios iPhone",
-        "icon": "📱",
-        "items": []
-      }
-    ]
-  },
   "discounts": [
     {
-      "brand": "Nombre de la marca",
-      "code": "DACAPE10",
-      "description": "Descripción del descuento y en qué productos aplica.",
-      "discount": "10% de descuento",
-      "url": ""
+      "brand": "ESR",
+      "code": "daniel20ANI",
+      "description": "Todos los productos",
+      "discount": "20% de descuento",
+      "url": "https://eu.esrtech.com/"
+    },
+    {
+      "brand": "Tesla",
+      "code": "daniel965396",
+      "description": "Todos los modelos",
+      "discount": "Si utilizas este link tendrás un gran descuento cuando compres cualquier coche Tesla nuevo, en función del modelo que elijas el descuento será mayor o menor.",
+      "url": "https://www.tesla.com/referral/daniel965396"
     }
   ]
 }

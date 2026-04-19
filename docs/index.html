@@ -15,7 +15,6 @@
       <a href="#home" class="nav-brand">dacape<span class="dot">.</span>dev</a>
       <div class="nav-links">
         <a href="#home"       class="nav-link" data-page="home">Inicio</a>
-        <a href="#productos"  class="nav-link" data-page="productos">Productos</a>
         <a href="#descuentos" class="nav-link" data-page="descuentos">Descuentos</a>
       </div>
     </nav>
@@ -23,7 +22,6 @@
 
   <main>
     <section id="home"       class="page"></section>
-    <section id="productos"  class="page hidden"></section>
     <section id="descuentos" class="page hidden"></section>
   </main>
 
@@ -42,15 +40,12 @@
   };
 
 let data = null;
-  let activeCategory = null;
-
   async function init() {
     document.getElementById('year').textContent = new Date().getFullYear();
     try {
       const res = await fetch('data.json');
       data = await res.json();
       renderHome();
-      renderProducts();
       renderDiscounts();
     } catch (e) {
       console.error('No se pudo cargar data.json', e);
@@ -109,53 +104,7 @@ let data = null;
       <div class="featured-links">${featuredHtml}</div>`;
   }
 
-  /* ── PRODUCTS ────────────────────────────────── */
-  function renderProducts() {
-    const { categories } = data.products;
-    activeCategory = activeCategory || categories[0]?.id;
-
-    const tabsHtml = categories.map(cat => `
-      <button class="tab-btn ${cat.id === activeCategory ? 'active' : ''}"
-              onclick="switchCategory('${cat.id}', this)">
-        ${cat.icon} ${cat.name}
-      </button>`).join('');
-
-    document.getElementById('productos').innerHTML = `
-      <div class="section-header">
-        <p class="section-tag">productos</p>
-        <h2 class="section-title">Lo que recomiendo</h2>
-      </div>
-      <div class="category-tabs">${tabsHtml}</div>
-      <div id="products-grid" class="products-grid">
-        ${renderProductItems(categories.find(c => c.id === activeCategory)?.items || [])}
-      </div>`;
-  }
-
-  function renderProductItems(items) {
-    if (!items.length) return `
-      <div class="empty-state">
-        <div class="code">[ ]</div>
-        Próximamente...
-      </div>`;
-    return items.map(item => `
-      <a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer" class="product-card">
-        ${item.image ? `<img src="${item.image}" alt="${item.name}" class="product-img">` : ''}
-        ${item.tag ? `<span class="product-tag">${item.tag}</span>` : ''}
-        <div class="product-name">${item.name}</div>
-        <div class="product-desc">${item.description}</div>
-        <div class="product-cta">Ver producto →</div>
-      </a>`).join('');
-  }
-
-  function switchCategory(id, btn) {
-    activeCategory = id;
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('products-grid').innerHTML =
-      renderProductItems(data.products.categories.find(c => c.id === id)?.items || []);
-  }
-
-  /* ── DISCOUNTS ───────────────────────────────── */
+/* ── DISCOUNTS ───────────────────────────────── */
   function renderDiscounts() {
     const { discounts } = data;
     const cardsHtml = discounts.length
