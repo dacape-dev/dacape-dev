@@ -39,15 +39,15 @@
     {
       "brand": "ESR",
       "code": "daniel20ANI",
-      "description": "Todos los productos",
+      "description": "Fundas, cargadores MagSafe, soportes y accesorios para móvil y tablet. Una de las marcas que más uso en el día a día.",
       "discount": "20% de descuento",
       "url": "https://eu.esrtech.com/"
     },
     {
       "brand": "Tesla",
       "code": "daniel965396",
-      "description": "Todos los modelos",
-      "discount": "Si utilizas este link tendrás un gran descuento cuando compres cualquier coche Tesla nuevo, en función del modelo que elijas el descuento será mayor o menor.",
+      "description": "Descuento al comprar cualquier Tesla nuevo. El importe varía según el modelo, pero en todos aplica. Usa el enlace o el código al configurar tu pedido.",
+      "discount": "Descuento en compra",
       "url": "https://www.tesla.com/referral/daniel965396"
     }
   ]
