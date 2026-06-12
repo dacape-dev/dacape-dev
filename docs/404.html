@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 · dacape.dev</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/shared/home.css">
+  <style>
+    body { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; gap: 1.5rem; }
+    .code-404 { font-family: 'JetBrains Mono', monospace; font-size: clamp(5rem, 20vw, 10rem); font-weight: 600; line-height: 1; color: var(--accent); opacity: 0.25; }
+    h1 { font-size: clamp(1.2rem, 4vw, 1.8rem); font-weight: 600; color: var(--text); }
+    p  { color: var(--muted); font-size: 1rem; }
+    .back-btn {
+      display: inline-block; margin-top: 0.5rem;
+      padding: 0.65rem 1.5rem; border-radius: 8px;
+      background: transparent; border: 1px solid var(--border);
+      color: var(--accent); font-size: 0.95rem; text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .back-btn:hover { background: var(--subtle); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="code-404">404</div>
+  <h1>Página no encontrada</h1>
+  <p>La URL que buscas no existe o ha sido movida.</p>
+  <a href="/" class="back-btn">← Volver al inicio</a>
+</body>
+</html>

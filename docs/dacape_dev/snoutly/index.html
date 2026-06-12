@@ -26,6 +26,37 @@
   <meta name="twitter:image"       content="https://dacape.dev/dacape_dev/snoutly/logo512.png">
 
   <link rel="icon" href="logo512.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "dacape.dev", "item": "https://dacape.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Snoutly", "item": "https://dacape.dev/dacape_dev/snoutly/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Snoutly",
+    "description": "Fotografía cualquier perro e identifica su raza al instante con IA offline. Construye tu colección, desbloquea logros y descubre más de 100 razas.",
+    "url": "https://dacape.dev/dacape_dev/snoutly/",
+    "image": "https://dacape.dev/dacape_dev/snoutly/logo512.png",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=dev.dacape.snoutly",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Carvajal",
+      "url": "https://dacape.dev"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../shared/apps.css">
@@ -122,8 +153,9 @@
       <a href="privacy_policy.html">Política de privacidad</a>
       <a href="terms_conditions.html">Términos y condiciones</a>
     </div>
-    <p class="footer-brand">© 2025 Snoutly · Creado con ♥ por <a href="https://dacape.dev">dacape.dev</a></p>
+    <p class="footer-brand">© <span id="year"></span> Snoutly · Creado con ♥ por <a href="https://dacape.dev">dacape.dev</a></p>
   </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

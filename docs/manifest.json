@@ -1,0 +1,17 @@
+{
+  "name": "Daniel Carvajal · dacape.dev",
+  "short_name": "dacape.dev",
+  "description": "Desarrollador con más de una década de experiencia y creador de contenido. Apps propias en Google Play, libros en Amazon y códigos de descuento exclusivos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060409",
+  "theme_color": "#060409",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/images/profile.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}
